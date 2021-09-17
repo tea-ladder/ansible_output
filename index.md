@@ -11,8 +11,6 @@
 
 - [公式ドキュメントのベストプラクティス](https://docs.ansible.com/ansible/2.9/user_guide/playbooks_best_practices.html#directory-layout)に従った構成で作成する
 
-- 
-
 ```
 production                # inventory file for production servers
 staging                   # inventory file for staging environment
@@ -85,7 +83,7 @@ httpd-2.4.6-97.el7.centos.x86_64 : Apache HTTP Server
 [ansible ~]$ 
 ```
 
-- ここではgroup_varsの検証のため、2.4.6-95を明示的にインストールするようgroup_varsにapacheのバージョンを定義する
+- ここではgroup_varsの検証のため、2.4.6を明示的にインストールするようgroup_varsにapacheのバージョンを定義する
 
 ```
 httpd_version: 2.4.6
