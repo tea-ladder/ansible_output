@@ -178,7 +178,7 @@ ansible localhost -m setup
 - name: apache install for CentOS
   become: yes
   yum:
-    name: 'httpd-{{ httpd_version }}'
+    name: 'httpd-¥{¥{ httpd_version ¥}¥}'
     state: present
   when: ansible_distribution == 'CentOS'
 
@@ -187,7 +187,7 @@ ansible localhost -m setup
   apt:
     name: 'apache2'
     state: present
-	when: ansible_distribution == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu'
 ```
 
 
